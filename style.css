@@ -37,6 +37,11 @@ nav a:hover,
 nav a.active {
   color: #00b4d8;
 }
+a:focus,
+.btn:focus {
+  outline: 3px dashed #00b4d8;
+  outline-offset: 3px;
+}
 
 .projets-section {
   padding: 50px 20px;
@@ -49,6 +54,15 @@ nav a.active {
   flex-wrap: nowrap;
 }
 
+.projets-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projets-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
 .projet {
   border-radius: 15px;
   padding: 20px;
@@ -58,6 +72,7 @@ nav a.active {
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   transition: transform 0.3s, box-shadow 0.3s;
   color: white;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
 }
 
 .projet:hover {
@@ -81,7 +96,6 @@ nav a.active {
 .projet h3 {
   font-size: 1.3em;
   margin-bottom: 10px;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
 }
 
 .projet p {
@@ -140,6 +154,17 @@ footer {
   margin-top: 40px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 @media (max-width: 768px) {
   .projets-container {
     flex-wrap: nowrap;
@@ -149,87 +174,3 @@ footer {
     min-width: 250px;
   }
 }
-.projets {
-    text-align: center;
-    /* centre les articles à l'intérieur du conteneur */
-}
-
-.projets article {
-    display: inline-block;
-    /* affiche les articles les uns à côté des autres (comme du texte) */
-    vertical-align: top;
-    /* aligne le haut des articles entre eux */
-    width: 220px;
-    /* largeur fixe pour chaque carte */
-    margin: 10px;
-    /* espace extérieur autour de chaque carte */
-    padding: 10px;
-    /* espace intérieur entre le bord et le contenu */
-    background: #f9f9f9;
-    /* couleur de fond gris très clair */
-    border: 1px solid #ddd;
-    /* bordure fine et grise autour des cartes */
-    border-radius: 8px;
-    /* arrondit légèrement les coins de la carte */
-    text-align: left;
-    /* le texte à l’intérieur est aligné à gauche */
-}
-
-.projets h3 {
-    margin-top: 0;
-    /* supprime l’espace au-dessus du titre */
-    font-size: 1.1rem;
-    /* définit la taille du titre en unités relatives */
-}
-
-.projets a {
-    text-decoration: none;
-    /* enlève le soulignement par défaut des liens */
-    color: #0066cc;
-    /* applique une couleur bleue au lien */
-    font-weight: bold;
-    /* met le lien en gras */
-}
-
-.projets a:hover {
-    text-decoration: underline;
-    /* remet le soulignement quand on survole le lien */
-}
-
-.projets p {
-    font-size: 0.9rem;
-    /* définit une taille de texte légèrement plus petite */
-    color: #333;
-    /* applique une couleur gris foncé au texte */
-}
-
-.projets figure {
-    margin: 0;
-    /* supprime les marges par défaut autour de la figure */
-    padding: 0;
-    /* supprime le padding par défaut */
-}
-
-.projets figure img {
-    width: 100%;
-    /* l'image prend toute la largeur de la carte */
-    height: auto;
-    /* la hauteur s'ajuste automatiquement pour garder les proportions */
-    border-radius: 4px;
-    /* arrondit légèrement les coins de l'image */
-    border: 1px solid #ccc;
-    /* ajoute une bordure grise claire autour de l'image */
-
-    margin-bottom: 8px;
-    /* espace entre l'image et la légende */
-}
-
-.projets figure figcaption {
-    font-size: 0.85rem;
-    /* taille de la police de la légende */
-    color: #666;
-    /* couleur gris moyen pour la légende */
-    text-align: center;
-    /* centre le texte de la légende */
-}
-

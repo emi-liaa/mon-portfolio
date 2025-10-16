@@ -4,84 +4,87 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mes Projets - Emilia</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-<style>
-  img{ 
-    display: block !important;
-    visibility: visible !important;
-    width:200px;
-  }
-</style>
 </head>
 <body>
-  <header>
-    <h1> Mes Projets</h1>
-    <p>Découvrez mes réalisations avec photos et détails .</p>
+  <a href="#main" class="visually-hidden">Aller au contenu principal</a>
+
+  <header role="banner">
+    <h1>Bienvenue sur mon Portfolio</h1>
+    <p>Je suis Emilia, étudiante en L1 informatique à l’Université Littoral Côte d'Opale de Calais</p>
   </header>
 
-  <nav>
+  <nav role="navigation" aria-label="Menu principal">
     <a href="index.html">Accueil</a>
-    <a href="projets.html" class="active">Projets</a>
+    <a href="projets.html" class="active" aria-current="page">Projets</a>
     <a href="#contact">Contact</a>
+    <a href="https://www.univ-littoral.fr/">ULCO</a>
   </nav>
 
-  <section class="projets-section">
-    <div class="projets-container">
-      <div class="projet" style="background: linear-gradient(130deg, #fbc2eb, #a6c1ee);">
-        <img src="image/webimage.jpg" alt="Projet 1">
-        <h3>Site Web Université</h3>
-        <p>Création d’un porfolio pour mon université avec HTML, CSS.</p>
-        <p>site web personnel pour presenter mon portfolio.</p>
-            <p>creation de mon propre site portfolio pour presenter  mes competences.</p>
-        </p>
-        <a href="#" class="btn">Voir le projet</a>
+  <main id="main" role="main">
+    <section class="about-section" aria-labelledby="projects-title" style="text-align:center; padding:50px 20px;">
+      <h2 id="projects-title">Mes Projets</h2>
+      <p>Découvrez mes réalisations avec photos et détails</p>
+    </section>
+
+    <section class="projets-section" aria-labelledby="projects-list">
+      <h2 id="projects-list" class="visually-hidden">Liste des projets</h2>
+      <div class="projets-container" aria-label="Liste des projets, faites défiler horizontalement">
+        <article class="projet" aria-labelledby="proj1-title" style="background: linear-gradient(130deg, #fbc2eb, #a6c1ee);">
+          <img src="image/webimage.jpg" alt="Projet Site Web Université">
+          <h3 id="proj1-title">Site Web Université</h3>
+          <p>Création d’un portfolio pour mon université avec HTML, CSS.</p>
+          <p>Site web personnel pour présenter mon portfolio.</p>
+          <p>Création de mon propre site portfolio pour présenter mes compétences.</p>
+          <a href="#" class="btn">Voir le projet</a>
+        </article>
+
+        <article class="projet" aria-labelledby="proj2-title" style="background: linear-gradient(135deg, #ffecd2, #fcb69f);">
+          <img src="image/python.jpg" alt="Projet Application Python">
+          <h3 id="proj2-title">Application Python</h3>
+          <p>Réalisation de programmes et applications en Python.</p>
+          <p>Application web universitaire pour un projet de cours.</p>
+          <a href="#" class="btn">Voir le projet</a>
+        </article>
+
+        <article class="projet" aria-labelledby="proj3-title" style="background: linear-gradient(135deg, #d4fc79, #96e6a1);">
+          <img src="image/photo.jpg" alt="Projet Analyse de données">
+          <h3 id="proj3-title">Analyse de données</h3>
+          <p>Importer et traiter des données.</p>
+          <p>Transformer des données brutes en informations pertinentes grâce à l'analyse de données.</p>
+          <a href="#" class="btn">Voir le projet</a>
+        </article>
+
+        <article class="projet" aria-labelledby="proj4-title" style="background: linear-gradient(135deg, #a1c4fd, #c2e9fb);">
+          <img src="image/pro3.jpg" alt="Projet Application Web Gestion de Tâches">
+          <h3 id="proj4-title">Application web "Gestion de Tâches"</h3>
+          <p>Structurer et styler grâce à HTML et CSS.</p>
+          <p>Capacité de créer des applications web dynamiques.</p>
+          <p>Organisation et présentation claire des informations.</p>
+          <a href="#" class="btn">Voir le projet</a>
+        </article>
+
+        <article class="projet" aria-labelledby="proj5-title" style="background: linear-gradient(135deg, #f6d365, #fda085);">
+          <img src="image/pro5.jpg" alt="Projet Portfolio Personnel Avancé">
+          <h3 id="proj5-title">Portfolio personnel avancé</h3>
+          <p>Site web complet pour présenter mes projets et compétences avec design moderne.</p>
+          <p>HTML, CSS, JavaScript</p>
+          <a href="#" class="btn">Voir le projet</a>
+        </article>
       </div>
+    </section>
 
-      <div class="projet" style="background: linear-gradient(135deg, #ffecd2, #fcb69f);">
-        <img src="image/python.jpg" alt="Projet 2">
-        <h3>Application Python</h3>
-        <p>realiser des programmes et des applications en python.</p>
-        <p>application web universitaire pour un projet de cours.</p>
-        <a href="#" class="btn">Voir le projet</a>
-      </div>
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p><strong>Téléphone :</strong> 07 59 44 53 54</p>
+      <p><strong>Email :</strong> <a href="mailto:emylsst2000@gmail.com">emylsst2000@gmail.com</a></p>
+      <p><strong>Localisation :</strong> Calais, France</p>
+    </section>
+  </main>
 
-      <div class="projet" style="background: linear-gradient(135deg, #d4fc79, #96e6a1);">
-        <img src="image/photo.jpg" alt="Projet 3">
-        <h3>Analyse de données</h3>
-        <p>importer et traiter des donnees.</p>
-        <p>transformer des donnees brutes en informations pertinentes grace a l'analyse de donnees.</p>
-        <a href="#" class="btn">Voir le projet</a>
-      </div>
-
-      <div class="projet" style="background: linear-gradient(135deg, #a1c4fd, #c2e9fb);">
-        <img src="image/pro3.jpg" alt="Projet 4">
-        <h3>Application web "gestion de taches"</h3>
-        <p> structurer et styler grace a HTML et CSS.</p>
-        <p>capacite de creer des applications web dynamiques</p>
-        <p>organisations et presentation claire des informations</p>
-        <a href="#" class="btn">Voir le projet</a>
-      </div>
-      <div class="projet" style="background: linear-gradient(135deg, #f6d365, #fda085);">
-    <img src="image/pro5.jpg" alt="Projet 5">
-    <h3>Portfolio personnel avancé</h3>
-    <p>Site web complet pour présenter mes projets et compétences avec design moderne.</p>
-    <p>HTML, CSS, JavaScript</p>
-    <a href="#" class="btn">Voir le projet</a>
-</div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p><strong>Téléphone :</strong> 07 59 44 53 54</p>
-    <p><strong>Email :</strong> <a href="mailto:emylsst2000@gmail.com">emylsst2000@gmail.com</a></p>
-    <p><strong>Localisation :</strong> Calais, France</p>
-  </section>
-
-  <footer>
+  <footer role="contentinfo">
     <p>&copy; 2025 Emilia — Portfolio personnel</p>
   </footer>
 </body>
-
 </html>

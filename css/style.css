@@ -7,7 +7,7 @@ body {
 
 header {
   text-align: center;
-  background: linear-gradient(90deg, #0078d7, #70d0e3);
+  background: linear-gradient(90deg, #596065, #70b1e3);
   color: white;
   padding: 50px 20px;
 }
@@ -28,7 +28,7 @@ nav {
 
 nav a {
   transform: skewY(3deg);
-  color: rgb(68, 24, 198);
+  color: rgb(7, 6, 7);
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
@@ -62,7 +62,7 @@ nav a.active {
 }
 a:focus,
 .btn:focus {
-  outline: 3px dashed #00b4d8;
+  outline: 3px dashed #3e494c;
   outline-offset: 3px;
 }
 figure.photo-profil {
@@ -89,7 +89,7 @@ figure.photo-profil img {
 figure.photo-profil:hover {
   transform: scale(1.08); 
   border: 3px solid #00bcd4; 
-  box-shadow: 0 0 15px rgba(0, 188, 212, 0.5); 
+  box-shadow: 0 0 15px rgba(2, 54, 61, 0.5); 
 }
 
 figure.photo-profil:hover img {
@@ -108,7 +108,7 @@ figure.photo-profil:hover img {
 }
 
 .projet {
-  background-color: #00b4d8; 
+  background-color: #a4b6ba; 
   color: black;               
   text-shadow: none;
   border-radius: 12px;
@@ -137,7 +137,7 @@ figure.photo-profil:hover img {
 .projet:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-  background: linear-gradient(135deg, #0078d7, #00aaff); 
+  background: linear-gradient(135deg, #39434c, #66747a); 
 }
 
 .projet:hover img {
@@ -189,7 +189,7 @@ figure.photo-profil:hover img {
 }
 
 #contact a {
-  color: #0078d7;
+  color: #0a59a7;
   text-decoration: none;
 }
 
@@ -198,7 +198,7 @@ figure.photo-profil:hover img {
 }
 
 footer {
-  background-color: #0078d7;
+  background-color:  #596069;
   color: white;
   text-align: center;
   padding: 30px 20px;
@@ -215,6 +215,18 @@ footer {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+.contact-info a[href*="maps"] {
+  color: #0078d7;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a[href*="maps"]:hover {
+  color: #005999;
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .projets-container {
     grid-template-columns: 1fr; 

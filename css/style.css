@@ -106,6 +106,20 @@ figure.photo-profil:hover img {
   gap: 20px;
   justify-items: center;
 }
+.projets-section {
+  padding: 60px 30px;
+  background: linear-gradient(135deg, #f8fbff, #eaf3fc);
+}
+
+.projets-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: stretch;
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
 .projet {
   background-color: #a4b6ba; 

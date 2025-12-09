@@ -1,0 +1,109 @@
+
+.section-block {
+    background-color: var(--color-card-background);
+    padding: var(--spacing-large);
+    margin-bottom: var(--spacing-large);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-subtle);
+}
+
+.section-block h2 {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: var(--spacing-small);
+    margin-bottom: var(--spacing-medium);
+}
+
+.card-item {
+    display: flex;
+    margin-bottom: var(--spacing-medium);
+    padding: var(--spacing-medium) 0;
+    border-bottom: 1px dashed var(--color-border);
+}
+
+.card-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.date-side {
+    flex: 0 0 30%; /* 30% pour la partie date/titre */
+    padding-right: var(--spacing-medium);
+}
+
+.date-side h3 {
+    font-size: 1.1em;
+    color: var(--color-secondary);
+    margin-bottom: 5px;
+}
+
+.date-side p {
+    font-size: 0.9em;
+    color: var(--color-light-text);
+    margin-bottom: 2px;
+}
+
+.description-side {
+    flex: 1;
+    border-left: 3px solid var(--color-accent-bg);
+    padding-left: var(--spacing-medium);
+}
+
+.description-side p {
+    margin-bottom: 0;
+    font-size: 1em;
+}
+
+/* Compétences */
+.competences-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-medium);
+}
+
+.competences-grid ul {
+    flex: 1;
+    padding-left: 20px;
+    columns: 1; /* Permet un affichage en colonnes sur grand écran */
+}
+
+.competences-grid li {
+    list-style: disc;
+    color: var(--color-secondary);
+    padding-left: 5px;
+    margin-bottom: 5px;
+    font-family: var(--font-body);
+}
+
+.competences-grid li::marker {
+    color: var(--color-secondary);
+}
+
+/* --- Responsive Parcours --- */
+@media (max-width: 768px) {
+    .card-item {
+        flex-direction: column;
+    }
+
+    .date-side {
+        flex: 100%;
+        padding-right: 0;
+        margin-bottom: var(--spacing-small);
+    }
+
+    .description-side {
+        border-left: none;
+        padding-left: 0;
+        border-top: 3px solid var(--color-accent-bg);
+        padding-top: var(--spacing-small);
+    }
+    
+    .competences-grid {
+        flex-direction: column;
+    }
+    
+    .competences-grid ul {
+        columns: 1;
+        padding-left: 40px;
+    }
+}

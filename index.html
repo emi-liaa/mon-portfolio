@@ -1,64 +1,94 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accueil - Emilia</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emilia - À Propos de Moi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/accueil.css">
+    <link rel="stylesheet" href="css/variable.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-  <a href="#main" class="visually-hidden">Aller au contenu principal</a>
 
-  <header role="banner">
-    <h1>Bienvenue sur mon Portfolio</h1>
-    <p>Je suis Emilia, étudiante en L1 informatique à l’Université Littoral Côte d'Opale de Calais</p>
-  </header>
+    <header>
+        <section class=" logo">
+            <h1>Emilia</h1>
+            <p> ÉTUDIANTE EN INFORMATIQUE </p>
 
-  <nav role="navigation" aria-label="Menu principal">
-    <a href="index.html" class="active" aria-current="page">Accueil</a>
-    <a href="projets.html">Projets</a></li>
-    <a href="#contact">Contact</a></li>
-    <a href="https://www.univ-littoral.fr/">ULCO</a>
-  </nav>
+        </section>
 
-  <main id="main" role="main">
-    
-    <section class="about-section">
-     <figure class="photo-profil">
-      <img src="image/princip.jpg" alt="Photo d'Emilia">
-     </figure>
-      <h2>À propos de moi</h2>
-      <p>Je suis passionnée par le développement web et les technologies informatiques. Je crée des projets web et des applications pour apprendre et partager mes compétences.</p>
-      <a href="projets.html" class="btn">Voir mes projets</a>
-    </section>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">À PROPOS DE MOI</a></li>
+                <li><a href="parcours.html">PARCOURS</a></li>
+                <li><a href="projets.html">PROJETS</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.univ-littoral.fr">ULCO</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main class=" accueil-container">
 
-    <section class="contact" id="contact">
-     <h2>Contact</h2>
-     <p><strong>Téléphone :</strong> 0000000000</p>
-     <p><strong>Email :</strong> <a href="mailto:emylsst2000@gmail.com">emylsst2000@gmail.com</a></p>
-     <p><strong>Localisation :</strong> <a href="https://www.google.com/maps?q=Calais,+France" target="_blank" rel="noopener">Calais, France 📍</a></p>
-    </section>
-  </main>
+        <section class="profil-card">
+            <figure class="photo-wrapper">
+                <img src="image/princip.jpg" alt="photo d'Emilia">
+                <figcaption>photo d'Emilia</figcaption>
+            </figure>
 
-  <footer role="contentinfo">
-    <p>&copy; 2025 Emilia — Portfolio personnel</p>
-    <section class="socials" aria-label="Réseaux sociaux">
-  <a href="https://www.facebook.com/emi-lia" target="_blank" aria-label="Facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
+            <h2>Emilia</h2>
+            <p>ÉTUDIANTE EN INFORMATIQUE</p>
+            <a href="contact.html" class="btn btn-primary">me contacter</a>
 
-  <a href="https://www.twitter.com/in/emi-lia" target="_blank" aria-label="twitter">
-    <i class="fab fa-twitter"></i>
-  </a>
+            <section class="social-links">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </section>
 
-  <a href="https://www.instagram.com/emi-lia" target="_blank" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-</section>
-<link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  </footer>
+        </section>
+
+        <section class="hello-content" id="a-propos">
+            <h1>Hello</h1>
+            <h2>Qui je suis et ce que je fais!</h2>
+
+            <section class="action-buttons">
+                <a href="parcours.html" class="btn btn-primary">PARCOURS</a>
+                <a href="projets.html" class="btn btn-primary">PROJETS</a>
+                <a href="https://www.univ-littoral.fr" class="btn btn-primary">ULCO</a>
+            </section>
+
+            <p>Je suis passionnée par le développement web et les technologies informatiques. Je crée
+                des projets web et
+                des applications pour apprendre et partager mes compétences.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <section class="footer-info">
+            <p>Mentions légales | Politique de confidentialité</p>
+            <p>© 2023 par Emilia. Créé avec HTML/CSS</p>
+        </section>
+
+        <section class="footer-contact">
+            <p><strong>Tel:</strong> 0000000000</p>
+            <p><strong>E-mail :</strong><a href="mailto:emilyfsst2000@gmail.com">
+                    emylsst2000@gmail.com </a></p>
+        </section>
+
+        <section class="footer-social-links">
+            <p>En ligne</p>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </section>
+
+    </footer>
+
 </body>
+
 </html>

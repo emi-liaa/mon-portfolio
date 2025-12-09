@@ -1,108 +1,131 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mes Projets - Emilia</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emilia - Mes Projets</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projets.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-  <a href="#main" class="visually-hidden">Aller au contenu principal</a>
 
-  <header role="banner">
-    <h1>Bienvenue sur mon Portfolio</h1>
-    <p>Je suis Emilia, étudiante en L1 informatique à l’Université Littoral Côte d'Opale de Calais</p>
-  </header>
+    <header>
+        <section class="logo">
+            <h1>Emilia</h1>
+            <p>/ ÉTUDIANTE EN INFORMATIQUE</p>
+        </section>
 
-  <nav role="navigation" aria-label="Menu principal">
-    <a href="index.html">Accueil</a>
-    <a href="projets.html" class="active" aria-current="page">Projets</a>
-    <a href="#contact">Contact</a>
-    <a href="https://www.univ-littoral.fr/">ULCO</a>
-  </nav>
+        <nav>
+            <ul>
+                <li><a href="index.html">À PROPOS DE MOI</a></li>
+                <li><a href="parcours.html">PARCOURS</a></li>
+                <li><a href="projets.html" class="active">PROJETS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="https://www.univ-littoral.fr">ULCO</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main id="main" role="main">
-    <section class="about-section" aria-labelledby="projects-title" style="text-align:center; padding:50px 20px;">
-      <h2 id="projects-title">Mes Projets</h2>
-      <p>Découvrez mes réalisations avec photos et détails</p>
-    </section>
+    <main class="page-container projets-page">
+        <h1 class="page-title">Mes projets</h1>
+        <p class="intro-text">Découvrez mes réalisations avec photos et détails</p>
 
-    <section class="projets-section" aria-labelledby="projects-list">
-      <h2 id="projects-list" class="visually-hidden">Liste des projets</h2>
-      <section class="projets-container" aria-label="Liste des projets, faites défiler horizontalement">
-        <article class="projet" aria-labelledby="proj1-title">
-          <figure><img src="image/webimage.jpg" alt="Projet Site Web Université"></figure>
-          <h3 id="proj1-title">Site Web Université</h3>
-          <p>Création d’un portfolio pour mon université avec HTML, CSS.</p>
-          <p>Site web personnel pour présenter mon portfolio.</p>
-          <p>Création de mon propre site portfolio pour présenter mes compétences.</p>
-          <a href="#" class="btn">Voir le projet</a>
-        </article>
+        <section class="projets-grid">
 
-        <article class="projet" aria-labelledby="proj2-title" >
-          <figure><img src="image/python.jpg" alt="Projet Application Python"></figure>
-          <h3 id="proj2-title">Application Python</h3>
-          <p>Réalisation de programmes et applications en Python.</p>
-          <p>Application web universitaire pour un projet de cours.</p>
-          <a href="#" class="btn">Voir le projet</a>
-        </article>
+            <figure class="projet-card">
+                <section class="image-wrapper">
+                    <img src="image/pro1.jpg" alt="Site Web Université">
+                </section>
 
-        <article class="projet" aria-labelledby="proj3-title" >
-          <figure><img src="image/photo.jpg" alt="Projet Analyse de données"></figure>
-          <h3 id="proj3-title">Analyse de données</h3>
-          <p>Importer et traiter des données.</p>
-          <p>Transformer des données brutes en informations pertinentes grâce à l'analyse de données.</p>
-          <a href="#" class="btn">Voir le projet</a>
-        </article>
+                <figcaption class="content">
+                    <h2>Site Web Université</h2>
+                    <p class="role-title">HTML, CSS</p>
+                    <p>Création d'un portfolio pour mon université avec HTML et CSS. Site web personnel pour présenter
+                        mes compétences.</p>
+                    <a href="projets/projet1.html" class="voir-projet">Voir le projet</a>
+                </figcaption>
+            </figure>
 
-        <article class="projet" aria-labelledby="proj4-title">
-          <figure><img src="image/pro3.jpg" alt="Projet Application Web Gestion de Tâches"></figure>
-          <h3 id="proj4-title">Application web "Gestion de Tâches"</h3>
-          <p>Structurer et styler grâce à HTML et CSS.</p>
-          <p>Capacité de créer des applications web dynamiques.</p>
-          <p>Organisation et présentation claire des informations.</p>
-          <a href="#" class="btn">Voir le projet</a>
-        </article>
+            <figure class="projet-card">
+                <section class="image-wrapper">
+                    <img src="image/pro2.jpg" alt="Application Python">
+                </section>
 
-        <article class="projet" aria-labelledby="proj5-title" >
-          <figure><img src="image/pro5.jpg" alt="Projet Portfolio Personnel Avancé"></figure>
-          <h3 id="proj5-title">Portfolio personnel avancé</h3>
-          <p>Site web complet pour présenter mes projets et compétences avec design moderne.</p>
-          <p>HTML, CSS, JavaScript</p>
-          <a href="#" class="btn">Voir le projet</a>
-        </article>
-      </section>
-    </section>
+                <figcaption class="content">
+                    <h2>Application Python</h2>
+                    <p class="role-title">Python, Scripts</p>
+                    <p>Réalisation de programmes et applications en Python pour un projet de cours.</p>
+                    <a href="projets/projet2.html" class="voir-projet">Voir le projet</a>
+                </figcaption>
+            </figure>
 
-    
-    <section class="contact" id="contact">
-     <h2>Contact</h2>
-     <p><strong>Téléphone :</strong> 0000000000</p>
-     <p><strong>Email :</strong> <a href="mailto:emylsst2000@gmail.com">emylsst2000@gmail.com</a></p>
-     <p><strong>Localisation :</strong> <a href="https://www.google.com/maps?q=Calais,+France" target="_blank" rel="noopener">Calais, France 📍</a></p>
-    </section>
+            <figure class="projet-card">
+                <section class="image-wrapper">
+                    <img src="image/pro3.jpg" alt="Analyse de données">
+                </section>
 
-  </main>
+                <figcaption class="content">
+                    <h2>Analyse de données</h2>
+                    <p class="role-title">Analyse, Visualisation</p>
+                    <p>Transformer des données brutes en informations pertinentes grâce à l'analyse de données.</p>
+                    <a href="projets/projet3.html" class="voir-projet">Voir le projet</a>
+                </figcaption>
+            </figure>
 
-  <footer role="contentinfo">
-    <p>&copy; 2025 Emilia — Portfolio personnel</p>
-    <section class="socials" aria-label="Réseaux sociaux">
-  <a href="https://www.facebook.com/emi-lia" target="_blank" aria-label="Facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
+            <figure class="projet-card">
+                <section class="image-wrapper">
+                    <img src="image/pro4.jpg" alt="Application web Gestion de Tâches">
+                </section>
 
-  <a href="https://www.twitter.com/in/emi-lia" target="_blank" aria-label="twitter">
-    <i class="fab fa-twitter"></i>
-  </a>
+                <figcaption class="content">
 
-  <a href="https://www.instagram.com/emi-lia" target="_blank" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-</section>
-<link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  </footer>
+                    <h2>Application web "Gestion de Tâches"</h2>
+                    <p class="role-title">HTML, CSS, JavaScript</p>
+                    <p> Structurer et styler grâce à HTML et CSS. Capacité de créer des applications web dynamiques.</p>
+                    <a href="projets/projet4.html" class="voir-projet">Voir le projet</a>
+                </figcaption>
+
+            </figure>
+
+
+            <figure class="projet-card">
+                <section class="image-wrapper">
+                    <img src="image/pro5.jpg" alt="Portfolio personnel avancé">
+                </section>
+
+                <figcaption class="content">
+                    <h2>Portfolio personnel avancé</h2>
+                    <p class="role-title">HTML, CSS, JavaScript</p>
+                    <p>Site web complet pour présenter mes projets et compétences avec design moderne.</p>
+                    <a href="projets/projet5.html" class="voir-projet">Voir le projet</a>
+                </figcaption>
+            </figure>
+
+        </section>
+    </main>
+
+    <footer>
+        <section class="footer-info">
+            <p>Mentions légales | Politique de confidentialité </p>
+            <p>© 2023 par Emilia. Créé avec HTML/CSS</p>
+        </section>
+
+        <section class="footer-contact">
+            <p><strong>Tel:</strong> 0000000000</p>
+            <p><strong>E-mail :</strong><a href="mailto:emilyfsst2000@gmail.com">emylsst2000@gmail.com</a></p>
+        </section>
+
+        <section class="footer-social-links">
+            <p>En ligne</p>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </section>
+    </footer>
 
 </body>
+
 </html>

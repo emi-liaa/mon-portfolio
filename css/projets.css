@@ -75,7 +75,7 @@
     border-bottom-color: #3870b3;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
 
     .projet-content-grid {
         flex-direction: column;

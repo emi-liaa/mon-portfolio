@@ -16,7 +16,6 @@ body {
     background-color: var(--color-background);
 }
 
-/* --- Typographie --- */
 h1,
 h2,
 h3 {
@@ -52,7 +51,49 @@ ul {
     list-style: none;
 }
 
-/* --- Conteneurs de page --- */
+header {
+    background-color: var(--color-card-background);
+    padding: var(--spacing-medium) var(--spacing-large);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--box-shadow-subtle);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-size: 1.5em;
+    margin: 0;
+    color: var(--color-primary);
+}
+
+.logo p {
+    font-size: 0.8em;
+    margin: 0;
+    color: var(--color-light-text);
+}
+
+nav ul {
+    display: flex;
+    gap: var(--spacing-medium);
+}
+
+nav a {
+    color: var(--color-secondary);
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-bold);
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+}
+
+nav a.active,
+nav a:hover {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+}
+
 .page-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -61,68 +102,45 @@ ul {
 
 .page-title {
     font-size: 3em;
-    text-align: center;
-    margin-bottom: var(--spacing-extra-large);
-    color: var(--color-primary);
-    border-bottom: 5px solid var(--color-primary);
-    display: inline-block;
-    padding-bottom: 10px;
-    width: 100%;
-}
-
-
-/* --- HEADER --- */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--spacing-medium) var(--spacing-large);
-    background-color: var(--color-card-background);
-    box-shadow: var(--box-shadow-subtle);
-}
-
-.logo h1 {
-    font-size: 1.8em;
-    margin-bottom: 0;
-    color: var(--color-primary);
-}
-
-.logo p {
-    font-size: 0.8em;
-    margin-top: -5px;
-    color: var(--color-light-text);
-}
-
-/* NAVIGATION */
-nav ul {
-    display: flex;
-    gap: var(--spacing-medium);
-}
-
-nav a {
-    color: var(--color-secondary);
     font-weight: var(--font-weight-bold);
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    margin-bottom: var(--spacing-large);
+    border-bottom: 3px solid var(--color-primary);
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
-nav a:hover,
-nav a.active {
-    background-color: var(--color-primary);
-    color: var(--color-card-background);
+/* --- Styles pour les états dynamiques :focus et :active --- */
+
+/* Appliqué à tous les liens, même ceux du menu */
+a:focus {
+    /* Retire le contour par défaut du navigateur (souvent moche) */
+    outline: none;
+    /* Met un contour sur les liens et boutons pour l'accessibilité */
+    box-shadow: 0 0 0 3px var(--color-primary);
 }
 
+/* Appliqué à tous les boutons */
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--color-primary), var(--box-shadow-subtle);
+}
 
-/* --- Boutons --- */
+/* Appliqué aux cartes de projets */
+.projet-card:focus {
+    /* Mêmes effets que le hover, mais sur focus */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1), 0 0 0 3px var(--color-primary);
+}
+
 .btn {
     display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 25px;
+    font-family: var(--font-heading);
     font-weight: var(--font-weight-bold);
-    text-transform: uppercase;
+    border-radius: 5px;
     text-align: center;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
 }
 
 .btn-primary {
@@ -131,10 +149,18 @@ nav a.active {
     border: 2px solid var(--color-primary);
 }
 
+
+
 .btn-primary:hover {
-    background-color: transparent;
-    color: var(--color-primary);
-    transform: translateY(-2px);
+
+    background-color: var(--color-secondary);
+    color: var(--color-background);
+    border-color: var(--color-secondary);
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease-out;
 }
 
 .btn-secondary {
@@ -146,38 +172,65 @@ nav a.active {
 .btn-secondary:hover {
     background-color: var(--color-primary);
     color: var(--color-card-background);
-    transform: translateY(-2px);
 }
 
 
-/* --- Pied de page (Footer) --- */
 footer {
+    background-color: var(--color-card-background);
+    color: var(--color-secondary);
+    padding: var(--spacing-large);
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: var(--spacing-medium) var(--spacing-large);
-    background-color: var(--color-card-background);
-    box-shadow: var(--box-shadow-subtle);
-    margin-top: var(--spacing-large);
+    flex-wrap: wrap;
     font-size: 0.9em;
-    color: var(--color-light-text);
 }
 
-.footer-contact strong {
-    color: var(--color-primary);
+
+.contact a {
+    color: #0a59a7;
+    text-decoration: none;
 }
 
-.footer-social-links a {
-    color: var(--color-secondary);
-    font-size: 1.2em;
-    margin-left: 10px;
+footer p {
+    margin: 5px 0;
 }
 
-.footer-social-links a:hover {
-    color: var(--color-primary);
+.footer-info,
+.footer-contact {
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: var(--spacing-medium);
 }
 
-/* --- Liens Sociaux (Générique) --- */
+.footer-social-links {
+    flex-basis: 20%;
+    min-width: 150px;
+    display: flex;
+}
+
+.footer-social-links p {
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-small);
+}
+
+.footer-social-links {
+    flex-basis: 20%;
+    min-width: 150px;
+    display: flex;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 .social-links a,
 .footer-social-links a,
 .social-links-contact a {
@@ -193,10 +246,11 @@ footer {
 .footer-social-links a:hover,
 .social-links-contact a:hover {
     transform: scale(1.2);
+
     color: var(--color-primary);
+
 }
 
-/* Styles pour la navigation entre les pages (parcours, projets) */
 .page-navigation {
     max-width: 1200px;
     margin: 30px auto;
@@ -206,68 +260,60 @@ footer {
     align-items: center;
 }
 
-/* Garder ceci pour la page contact si vous n'avez qu'un seul bouton */
 .navigation-prev {
     text-align: left;
 }
 
-/* --- 📱 RESPONSIVE GLOBAL (Max 768px) --- */
 @media (max-width: 768px) {
-
-    /* HEADER & NAVIGATION */
     header {
         flex-direction: column;
         align-items: flex-start;
-        padding: var(--spacing-small);
-    }
-
-    .logo {
-        margin-bottom: var(--spacing-small);
+        padding: var(--spacing-medium);
     }
 
     nav ul {
-        /* Les liens passent de ligne à colonne */
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
-        gap: 2px;
-        /* Espacement plus petit sur mobile */
+        gap: 5px;
+        margin-top: var(--spacing-small);
     }
 
-    /* FOOTER */
+    .page-title {
+        font-size: 2em;
+        margin-bottom: var(--spacing-medium);
+    }
+
     footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: var(--spacing-medium) var(--spacing-small);
+        gap: var(--spacing-medium);
     }
 
     .footer-info,
     .footer-contact,
     .footer-social-links {
-        margin-bottom: var(--spacing-small);
-        width: 100%;
+        flex-basis: 100%;
+        margin-bottom: var(--spacing-medium);
     }
 
-    .footer-social-links a {
-        margin: 0 10px;
+    .page-container {
+        padding: var(--spacing-medium);
+        /* Retirer le max-width si tu l'as mis pour la page container */
     }
 
-    /* TYPOGRAPHIE */
-    .page-title {
-        font-size: 2.5em;
-        /* Réduire la taille du titre */
-        margin-bottom: var(--spacing-large);
-    }
-
-    /* NAVIGATION ENTRE PAGES */
+    /* 3. NAVIGATION (Boutons Précédent/Suivant) */
     .page-navigation {
+        /* S'ils sont côte à côte, les empiler */
         flex-direction: column;
         gap: var(--spacing-medium);
-        padding: 0 var(--spacing-small);
+        margin: var(--spacing-medium) auto;
     }
 
     .page-navigation .btn {
         width: 100%;
+        /* S'assurer qu'ils prennent toute la largeur */
+        text-align: center;
     }
 }

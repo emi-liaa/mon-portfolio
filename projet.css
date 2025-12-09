@@ -64,45 +64,31 @@
     box-shadow: var(--box-shadow-subtle);
 }
 
-.galerie-images {
-    display: flex;
-    gap: var(--spacing-small);
-    margin-top: var(--spacing-medium);
-    justify-content: space-around;
+.galerie-full-width {
+    text-align: center;
 }
 
-.galerie-images img {
-    width: 30%;
+.galerie-full-width h2 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-large);
+    font-size: 2em;
+}
+
+.full-width-image {
+    width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 8px;
+    margin-bottom: var(--spacing-medium);
     box-shadow: var(--box-shadow-subtle);
 }
 
-/* --- 📱 RESPONSIVE PAGE DÉTAIL PROJET (Max 768px) --- */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .projet-content-grid {
-        /* Empiler la description et l'image */
         flex-direction: column;
     }
 
-    .projet-header .page-title {
-        font-size: 3em;
-        margin-bottom: var(--spacing-medium);
-    }
-
+    .image-column,
     .description-column {
-        padding: var(--spacing-small);
-    }
-
-    .galerie-images {
-        /* Empiler les images en colonne ou les réduire */
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .galerie-images img {
-        width: 45%;
-        /* Deux images par ligne */
-        margin-bottom: 10px;
+        flex: 100%;
     }
 }

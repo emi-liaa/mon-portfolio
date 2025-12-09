@@ -8,7 +8,6 @@
 
 .profil-card {
     flex: 0 0 350px;
-    /* Largeur fixe pour la carte */
     background-color: var(--color-accent-bg);
     padding: var(--spacing-large);
     text-align: center;
@@ -44,6 +43,24 @@
     margin-bottom: var(--spacing-medium);
 }
 
+.social-links,
+.footer-social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.social-links,
+.footer-social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
 .hello-content {
     flex: 1;
     padding-top: var(--spacing-large);
@@ -70,13 +87,11 @@
     gap: var(--spacing-medium);
 }
 
-/* --- 📱 RESPONSIVE ACCUEIL (Max 768px) --- */
 @media (max-width: 768px) {
     .accueil-container {
-        /* Empiler la carte et le contenu */
+        /* Les deux colonnes passent en une seule colonne */
         flex-direction: column;
         margin: var(--spacing-large) auto;
-        padding: 0 var(--spacing-medium);
     }
 
     .profil-card {
@@ -87,15 +102,15 @@
 
     .hello-content h1 {
         font-size: 3em;
+        /* Réduire la taille de la police pour le titre principal */
     }
 
     .hello-content h2 {
         font-size: 1.5em;
+        /* Réduire la taille du sous-titre */
     }
 
     .action-buttons {
-        /* Empiler les boutons d'action */
-        flex-direction: column;
-        gap: var(--spacing-small);
+        justify-content: center;
     }
 }

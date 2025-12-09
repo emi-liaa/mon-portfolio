@@ -9,7 +9,6 @@
 
 .form-wrapper {
     flex: 2;
-    /* Le formulaire prend plus d'espace */
     background-color: var(--color-card-background);
     padding: var(--spacing-large);
     border-radius: 8px;
@@ -26,19 +25,15 @@
     border-radius: 5px;
     font-size: 1em;
     font-family: var(--font-body);
-    /* Assure une transition douce */
-    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-/* Cible tous les champs de saisie (texte, email, textarea) */
+/* SÉLECTEUR CORRIGÉ à utiliser dans contact.css */
 .contact-form input[type="text"]:focus,
 .contact-form input[type="email"]:focus,
+/* ✅ 'email' est le type correct */
 .contact-form textarea:focus {
-    /* Retire le contour par défaut du navigateur */
     outline: none;
-    /* Met une bordure primaire pour indiquer que l'élément est actif */
     border: 1px solid var(--color-primary);
-    /* Ajoute une ombre légère autour du champ pour le faire ressortir */
     box-shadow: 0 0 5px rgba(10, 11, 12, 0.5);
     transition: border-color 0.2s, box-shadow 0.2s;
 }
@@ -78,21 +73,32 @@
 }
 
 .social-links-contact {
-    margin-top: var(--spacing-large);
-    text-align: center;
+    display: flex;
+    gap: 15px;
+    margin-top: var(--spacing-medium);
+
 }
 
-/* --- 📱 RESPONSIVE CONTACT (Max 768px) --- */
+.social-links-contact a:hover img {
+    opacity: 1;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.btn:focus {
+    outline: 3px solid var(--color-primary);
+    /* Ajoute un contour visible */
+    outline-offset: 2px;
+    /* Laisse un peu d'espace */
+}
+
 @media (max-width: 768px) {
     .contact-grid {
-        /* Empiler le formulaire et le bloc d'information */
         flex-direction: column;
     }
 
     .form-wrapper,
     .info-details {
-        /* Réinitialiser les propriétés flex qui étaient fixes */
-        flex: 1;
-        padding: var(--spacing-medium);
+        flex: 1 1 100%;
     }
 }

@@ -7,7 +7,6 @@
 
 .projets-grid {
     display: grid;
-    /* Règle principale : les cartes font au moins 300px, sinon elles passent à 1 colonne */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-large);
 }
@@ -65,21 +64,33 @@
 
 .voir-projet {
     display: inline-block;
-    font-weight: var(--font-weight-bold);
     color: var(--color-primary);
-    padding: 5px 0;
+    font-weight: var(--font-weight-bold);
     border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 2px;
 }
 
 .voir-projet:hover {
-    color: var(--color-secondary);
-    border-bottom-color: var(--color-secondary);
+    color: #3870b3;
+    border-bottom-color: #3870b3;
 }
 
-/* --- 📱 RESPONSIVE PROJETS (Max 768px) --- */
+@media (max-width: 768px) {
+
+    .projet-content-grid {
+        flex-direction: column;
+    }
+
+    .image-column,
+    .description-column {
+        flex: 1 1 100%;
+    }
+}
+
+/* --- Responsive Projets (Dans projets.css) --- */
 @media (max-width: 768px) {
     .projets-grid {
-        /* Simplifier pour s'assurer qu'il n'y a qu'une seule colonne si l'écran est petit */
+        /* Une seule colonne par projet sur mobile (ou minmax(250px, 1fr) pour deux petites) */
         grid-template-columns: 1fr;
     }
 }

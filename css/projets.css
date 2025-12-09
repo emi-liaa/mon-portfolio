@@ -25,7 +25,7 @@
 }
 
 .image-wrapper {
-    height: 200px; 
+    height: 200px;
     overflow: hidden;
 }
 
@@ -75,3 +75,22 @@
     border-bottom-color: #3870b3;
 }
 
+@media (max-width: 768px) {
+
+    .projet-content-grid {
+        flex-direction: column;
+    }
+
+    .image-column,
+    .description-column {
+        flex: 1 1 100%;
+    }
+}
+
+/* --- Responsive Projets (Dans projets.css) --- */
+@media (max-width: 768px) {
+    .projets-grid {
+        /* Une seule colonne par projet sur mobile (ou minmax(250px, 1fr) pour deux petites) */
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,4 +1,3 @@
-
 .section-block {
     background-color: var(--color-card-background);
     padding: var(--spacing-large);
@@ -27,7 +26,7 @@
 }
 
 .date-side {
-    flex: 0 0 30%; /* 30% pour la partie date/titre */
+    flex: 0 0 30%;
     padding-right: var(--spacing-medium);
 }
 
@@ -54,7 +53,6 @@
     font-size: 1em;
 }
 
-/* Compétences */
 .competences-grid {
     display: flex;
     justify-content: space-between;
@@ -64,7 +62,7 @@
 .competences-grid ul {
     flex: 1;
     padding-left: 20px;
-    columns: 1; /* Permet un affichage en colonnes sur grand écran */
+    columns: 1;
 }
 
 .competences-grid li {
@@ -79,31 +77,30 @@
     color: var(--color-secondary);
 }
 
-/* --- Responsive Parcours --- */
+/* --- Responsive Parcours (Dans parcours.css) --- */
 @media (max-width: 768px) {
     .card-item {
+        /* Empiler la date et la description */
         flex-direction: column;
     }
 
     .date-side {
-        flex: 100%;
+        /* Laisser la date prendre toute la largeur */
+        flex: 1;
         padding-right: 0;
-        margin-bottom: var(--spacing-small);
+        margin-bottom: 5px;
     }
 
     .description-side {
+        /* Supprimer la barre de séparation verticale sur mobile */
         border-left: none;
         padding-left: 0;
-        border-top: 3px solid var(--color-accent-bg);
-        padding-top: var(--spacing-small);
+        margin-top: 10px;
     }
-    
+
     .competences-grid {
+        /* Empiler les colonnes de compétences */
         flex-direction: column;
-    }
-    
-    .competences-grid ul {
-        columns: 1;
-        padding-left: 40px;
+        gap: var(--spacing-medium);
     }
 }

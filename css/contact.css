@@ -9,7 +9,6 @@
 
 .form-wrapper {
     flex: 2;
-    /* Le formulaire prend plus d'espace */
     background-color: var(--color-card-background);
     padding: var(--spacing-large);
     border-radius: 8px;
@@ -26,6 +25,17 @@
     border-radius: 5px;
     font-size: 1em;
     font-family: var(--font-body);
+}
+
+/* SÉLECTEUR CORRIGÉ à utiliser dans contact.css */
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+/* ✅ 'email' est le type correct */
+.contact-form textarea:focus {
+    outline: none;
+    border: 1px solid var(--color-primary);
+    box-shadow: 0 0 5px rgba(10, 11, 12, 0.5);
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .contact-form textarea {
@@ -62,7 +72,6 @@
     margin-bottom: var(--spacing-small);
 }
 
-/* À AJOUTER dans contact.css */
 .social-links-contact {
     display: flex;
     gap: 15px;
@@ -74,6 +83,15 @@
     opacity: 1;
 }
 
+.contact-form input:focus,
+.contact-form textarea:focus,
+.btn:focus {
+    outline: 3px solid var(--color-primary);
+    /* Ajoute un contour visible */
+    outline-offset: 2px;
+    /* Laisse un peu d'espace */
+}
+
 @media (max-width: 768px) {
     .contact-grid {
         flex-direction: column;
@@ -81,6 +99,6 @@
 
     .form-wrapper,
     .info-details {
-        flex: 100%;
+        flex: 1 1 100%;
     }
 }

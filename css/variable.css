@@ -1,21 +1,21 @@
  :root {
-    /* --- Couleurs de base --- */
-    --color-primary: #0a0b0c; 
-    --color-secondary: #373030; 
-    --color-light-text: #130e0e; 
-    --color-background: #fef2da;
-    --color-card-background: #FFFFFF; 
-    --color-accent-bg: #EAE5DD; /* Beige clair pour la carte profil */
-    --color-border: #EAE5DD; 
+     /* --- Couleurs de base --- */
+     --color-primary: #0a0b0c;
+     --color-secondary: #373030;
+     --color-light-text: #130e0e;
+     --color-background: #fef2da;
+     --color-card-background: #FFFFFF;
+     --color-accent-bg: #EAE5DD;
+     --color-border: #EAE5DD;
 
-    /* --- Typographie et Espacements --- */
-    --font-heading: 'Montserrat', sans-serif;
-    --font-body: 'Open Sans', sans-serif;
-    --font-weight-regular: 400;
-    --font-weight-bold: 700;
-    --spacing-small: 10px;
-    --spacing-medium: 20px;
-    --spacing-large: 40px;
-    --spacing-extra-large: 50px;
-    --box-shadow-subtle: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
+     /* --- Typographie et Espacements --- */
+     --font-heading: 'Montserrat', sans-serif;
+     --font-body: 'Open Sans', sans-serif;
+     --font-weight-regular: 400;
+     --font-weight-bold: 700;
+     --spacing-small: 10px;
+     --spacing-medium: 20px;
+     --spacing-large: 40px;
+     --spacing-extra-large: 50px;
+     --box-shadow-subtle: 0 4px 8px rgba(0, 0, 0, 0.05);
+ }

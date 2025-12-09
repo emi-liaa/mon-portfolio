@@ -82,7 +82,6 @@
     box-shadow: var(--box-shadow-subtle);
 }
 
-/* --- Responsive Détail Projet --- */
 @media (max-width: 992px) {
     .projet-content-grid {
         flex-direction: column;

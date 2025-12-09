@@ -27,10 +27,8 @@
     font-family: var(--font-body);
 }
 
-/* SÉLECTEUR CORRIGÉ à utiliser dans contact.css */
 .contact-form input[type="text"]:focus,
 .contact-form input[type="email"]:focus,
-/* ✅ 'email' est le type correct */
 .contact-form textarea:focus {
     outline: none;
     border: 1px solid var(--color-primary);
@@ -87,9 +85,7 @@
 .contact-form textarea:focus,
 .btn:focus {
     outline: 3px solid var(--color-primary);
-    /* Ajoute un contour visible */
     outline-offset: 2px;
-    /* Laisse un peu d'espace */
 }
 
 @media (max-width: 768px) {

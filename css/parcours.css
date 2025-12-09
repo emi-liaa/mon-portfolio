@@ -77,29 +77,24 @@
     color: var(--color-secondary);
 }
 
-/* --- Responsive Parcours (Dans parcours.css) --- */
 @media (max-width: 768px) {
     .card-item {
-        /* Empiler la date et la description */
         flex-direction: column;
     }
 
     .date-side {
-        /* Laisser la date prendre toute la largeur */
         flex: 1;
         padding-right: 0;
         margin-bottom: 5px;
     }
 
     .description-side {
-        /* Supprimer la barre de séparation verticale sur mobile */
         border-left: none;
         padding-left: 0;
         margin-top: 10px;
     }
 
     .competences-grid {
-        /* Empiler les colonnes de compétences */
         flex-direction: column;
         gap: var(--spacing-medium);
     }

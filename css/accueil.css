@@ -89,25 +89,21 @@
 
 @media (max-width: 768px) {
     .accueil-container {
-        /* Les deux colonnes passent en une seule colonne */
         flex-direction: column;
         margin: var(--spacing-large) auto;
     }
 
     .profil-card {
-        /* Retirer la largeur fixe et laisser la carte prendre la largeur disponible */
         flex: 1;
         width: 100%;
     }
 
     .hello-content h1 {
         font-size: 3em;
-        /* Réduire la taille de la police pour le titre principal */
     }
 
     .hello-content h2 {
         font-size: 1.5em;
-        /* Réduire la taille du sous-titre */
     }
 
     .action-buttons {

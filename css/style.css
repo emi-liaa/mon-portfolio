@@ -1,8 +1,6 @@
-/* --- Importation des variables et des polices --- */
 @import url('variable.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
 
-/* --- Reset de base --- */
 * {
     margin: 0;
     padding: 0;
@@ -110,21 +108,16 @@ nav a:hover {
 }
 
 a:focus {
-    /* Retire le contour par défaut du navigateur (souvent moche) */
     outline: none;
-    /* Met un contour sur les liens et boutons pour l'accessibilité */
     box-shadow: 0 0 0 3px var(--color-primary);
 }
 
-/* Appliqué à tous les boutons */
 .btn:focus {
     outline: none;
     box-shadow: 0 0 0 3px var(--color-primary), var(--box-shadow-subtle);
 }
 
-/* Appliqué aux cartes de projets */
 .projet-card:focus {
-    /* Mêmes effets que le hover, mais sur focus */
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1), 0 0 0 3px var(--color-primary);
 }
@@ -299,12 +292,9 @@ footer p {
 
     .page-container {
         padding: var(--spacing-medium);
-        /* Retirer le max-width si tu l'as mis pour la page container */
     }
 
-    /* 3. NAVIGATION (Boutons Précédent/Suivant) */
     .page-navigation {
-        /* S'ils sont côte à côte, les empiler */
         flex-direction: column;
         gap: var(--spacing-medium);
         margin: var(--spacing-medium) auto;
@@ -312,7 +302,6 @@ footer p {
 
     .page-navigation .btn {
         width: 100%;
-        /* S'assurer qu'ils prennent toute la largeur */
         text-align: center;
     }
 
@@ -322,9 +311,11 @@ footer p {
         left: 0;
         width: 100%;
         z-index: 999;
+        height: 55px;
+        padding: 5px 10px;
     }
 
     .body {
-        padding-top: 90px;
+        padding-top: 65px;
     }
 }

@@ -1,5 +1,4 @@
  :root {
-     /* --- Couleurs de base --- */
      --color-primary: #0a0b0c;
      --color-secondary: #373030;
      --color-light-text: #130e0e;
@@ -8,7 +7,6 @@
      --color-accent-bg: #EAE5DD;
      --color-border: #EAE5DD;
 
-     /* --- Typographie et Espacements --- */
      --font-heading: 'Montserrat', sans-serif;
      --font-body: 'Open Sans', sans-serif;
      --font-weight-regular: 400;

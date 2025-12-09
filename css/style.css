@@ -234,6 +234,25 @@ footer p {
 
 }
 
+/* Styles pour la navigation entre les pages (parcours, projets) */
+.page-navigation {
+    /* Utiliser max-width pour centrer et padding pour l'espace intérieur */
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+
+    /* ESSENTIEL : Flexbox pour aligner les boutons */
+    display: flex;
+    /* Aligne le premier élément (Accueil) à gauche et le deuxième (Suivant) à droite */
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Garder ceci pour la page contact si vous n'avez qu'un seul bouton */
+.navigation-prev {
+    text-align: left;
+}
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;

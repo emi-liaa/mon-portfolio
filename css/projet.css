@@ -51,31 +51,7 @@
     margin-bottom: 5px;
 }
 
-.btn-retour {
-    display: inline-block;
-    margin-top: var(--spacing-large);
 
-    background-color: transparent;
-    /* couleur du bouton */
-    color: var(--color-primary);
-    /* couleur de l’écriture */
-
-    padding: 12px 26px;
-    font-size: 1em;
-    font-weight: 500;
-
-    border: 2px solid var(--color-secondary);
-    border-radius: 6px;
-
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.btn-retour:hover {
-    background-color: var(--color-secondary);
-    color: #ffffff;
-    /* écriture au hover */
-}
 
 .image-column {
     flex: 1;

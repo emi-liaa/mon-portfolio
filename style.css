@@ -1,0 +1,297 @@
+/* --- Importation des variables et des polices --- */
+@import url('variable.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+/* --- Reset de base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--color-secondary);
+    background-color: var(--color-background);
+}
+
+/* --- Typographie --- */
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-small);
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+p {
+    font-size: 1em;
+    margin-bottom: var(--spacing-medium);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #10171f;
+    /* Tonalité plus foncée */
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- Header et Navigation --- */
+header {
+    background-color: var(--color-card-background);
+    padding: var(--spacing-medium) var(--spacing-large);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--box-shadow-subtle);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-size: 1.5em;
+    margin: 0;
+    color: var(--color-primary);
+}
+
+.logo p {
+    font-size: 0.8em;
+    margin: 0;
+    color: var(--color-light-text);
+}
+
+nav ul {
+    display: flex;
+    gap: var(--spacing-medium);
+}
+
+nav a {
+    color: var(--color-secondary);
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-bold);
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+}
+
+nav a.active,
+nav a:hover {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+/* --- Conteneurs de page génériques --- */
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-large);
+}
+
+.page-title {
+    font-size: 3em;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-large);
+    border-bottom: 3px solid var(--color-primary);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-bold);
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-card-background);
+    border: 2px solid var(--color-primary);
+}
+
+
+
+.btn-primary:hover {
+
+    background-color: var(--color-secondary);
+    color: var(--color-background);
+    border-color: var(--color-secondary);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-card-background);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--color-card-background);
+    color: var(--color-secondary);
+    padding: var(--spacing-large);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 0.9em;
+}
+
+/* AJOUTER EN HAUT DE style.css (styles généraux) */
+footer {
+    display: flex;
+    justify-content: space-around;
+    /* Ajoutez ou conservez vos autres styles de base du footer ici */
+}
+
+
+.contact a {
+    color: #0a59a7;
+    text-decoration: none;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.footer-info,
+.footer-contact {
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: var(--spacing-medium);
+}
+
+.footer-social-links {
+    flex-basis: 20%;
+    min-width: 150px;
+    display: flex;
+}
+
+.footer-social-links p {
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-small);
+}
+
+/* VÉRIFIEZ ou REMPLACEZ ce bloc dans style.css */
+.footer-social-links {
+    flex-basis: 20%;
+    min-width: 150px;
+    display: flex;
+}
+
+/* À ajouter à style.css */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* AJOUTER à la fin de style.css (Nouveau style hover pour zoomer) */
+
+.social-links a,
+.footer-social-links a,
+.social-links-contact a {
+    /* Rétablit l'alignement horizontal par défaut */
+    display: inline-block;
+    /* Ajout d'une petite marge pour espacer les icônes */
+    margin: 0 5px;
+    /* Transition pour l'effet de zoom au survol */
+    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 1.4em;
+    color: var(--color-secondary);
+}
+
+
+.social-links a:hover,
+.footer-social-links a:hover,
+.social-links-contact a:hover {
+    transform: scale(1.2);
+
+    color: var(--color-primary);
+
+}
+
+/* Styles pour la navigation entre les pages (parcours, projets) */
+.page-navigation {
+    /* Utiliser max-width pour centrer et padding pour l'espace intérieur */
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+
+    /* ESSENTIEL : Flexbox pour aligner les boutons */
+    display: flex;
+    /* Aligne le premier élément (Accueil) à gauche et le deuxième (Suivant) à droite */
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Garder ceci pour la page contact si vous n'avez qu'un seul bouton */
+.navigation-prev {
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--spacing-medium);
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 5px;
+        margin-top: var(--spacing-small);
+    }
+
+    .page-title {
+        font-size: 2em;
+        margin-bottom: var(--spacing-medium);
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--spacing-medium);
+    }
+
+    .footer-info,
+    .footer-contact,
+    .footer-social-links {
+        flex-basis: 100%;
+        margin-bottom: var(--spacing-medium);
+    }
+}

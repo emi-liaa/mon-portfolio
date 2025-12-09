@@ -1,0 +1,86 @@
+.contact-page {
+    padding-top: var(--spacing-large);
+}
+
+.contact-grid {
+    display: flex;
+    gap: var(--spacing-large);
+}
+
+.form-wrapper {
+    flex: 2;
+    /* Le formulaire prend plus d'espace */
+    background-color: var(--color-card-background);
+    padding: var(--spacing-large);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-subtle);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: var(--spacing-medium);
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: var(--font-body);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.send-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+}
+
+.info-details {
+    flex: 1;
+    background-color: var(--color-accent-bg);
+    padding: var(--spacing-large);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-subtle);
+}
+
+.info-details h3 {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 5px;
+    margin-top: var(--spacing-medium);
+    margin-bottom: var(--spacing-medium);
+}
+
+.info-details h3:first-child {
+    margin-top: 0;
+}
+
+.info-details p {
+    margin-bottom: var(--spacing-small);
+}
+
+/* À AJOUTER dans contact.css */
+.social-links-contact {
+    display: flex;
+    gap: 15px;
+    margin-top: var(--spacing-medium);
+
+}
+
+.social-links-contact a:hover img {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        flex-direction: column;
+    }
+
+    .form-wrapper,
+    .info-details {
+        flex: 1 1 100%;
+    }
+}

@@ -44,25 +44,6 @@
     margin-bottom: var(--spacing-medium);
 }
 
-/* VÉRIFIEZ ou REMPLACEZ ce bloc dans accueil.css */
-.social-links,
-.footer-social-links {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.social-links,
-.footer-social-links {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}
-
 .hello-content {
     flex: 1;
     padding-top: var(--spacing-large);
@@ -89,31 +70,32 @@
     gap: var(--spacing-medium);
 }
 
-/* --- Responsive Accueil --- */
-@media (max-width: 992px) {
+/* --- 📱 RESPONSIVE ACCUEIL (Max 768px) --- */
+@media (max-width: 768px) {
     .accueil-container {
+        /* Empiler la carte et le contenu */
         flex-direction: column;
-        align-items: center;
-        gap: var(--spacing-large);
-        padding: var(--spacing-large);
+        margin: var(--spacing-large) auto;
+        padding: 0 var(--spacing-medium);
     }
 
     .profil-card {
-        flex: 0 0 auto;
-        width: 80%;
-        max-width: 400px;
+        /* Retirer la largeur fixe et laisser la carte prendre la largeur disponible */
+        flex: 1;
+        width: 100%;
     }
 
-    .hello-content {
-        padding-top: 0;
-        text-align: center;
+    .hello-content h1 {
+        font-size: 3em;
     }
 
     .hello-content h2 {
-        display: block;
+        font-size: 1.5em;
     }
 
     .action-buttons {
-        justify-content: center;
+        /* Empiler les boutons d'action */
+        flex-direction: column;
+        gap: var(--spacing-small);
     }
 }

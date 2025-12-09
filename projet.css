@@ -64,32 +64,45 @@
     box-shadow: var(--box-shadow-subtle);
 }
 
-.galerie-full-width {
-    text-align: center;
+.galerie-images {
+    display: flex;
+    gap: var(--spacing-small);
+    margin-top: var(--spacing-medium);
+    justify-content: space-around;
 }
 
-.galerie-full-width h2 {
-    color: var(--color-primary);
-    margin-bottom: var(--spacing-large);
-    font-size: 2em;
-}
-
-.full-width-image {
-    width: 100%;
+.galerie-images img {
+    width: 30%;
     height: auto;
-    border-radius: 8px;
-    margin-bottom: var(--spacing-medium);
+    border-radius: 5px;
     box-shadow: var(--box-shadow-subtle);
 }
 
-/* --- Responsive Détail Projet --- */
-@media (max-width: 992px) {
+/* --- 📱 RESPONSIVE PAGE DÉTAIL PROJET (Max 768px) --- */
+@media (max-width: 768px) {
     .projet-content-grid {
+        /* Empiler la description et l'image */
         flex-direction: column;
     }
 
-    .image-column,
+    .projet-header .page-title {
+        font-size: 3em;
+        margin-bottom: var(--spacing-medium);
+    }
+
     .description-column {
-        flex: 100%;
+        padding: var(--spacing-small);
+    }
+
+    .galerie-images {
+        /* Empiler les images en colonne ou les réduire */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .galerie-images img {
+        width: 45%;
+        /* Deux images par ligne */
+        margin-bottom: 10px;
     }
 }

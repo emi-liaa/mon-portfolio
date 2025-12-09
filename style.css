@@ -46,58 +46,13 @@ a {
 
 a:hover {
     color: #10171f;
-    /* Tonalité plus foncée */
 }
 
 ul {
     list-style: none;
 }
 
-/* --- Header et Navigation --- */
-header {
-    background-color: var(--color-card-background);
-    padding: var(--spacing-medium) var(--spacing-large);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: var(--box-shadow-subtle);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo h1 {
-    font-size: 1.5em;
-    margin: 0;
-    color: var(--color-primary);
-}
-
-.logo p {
-    font-size: 0.8em;
-    margin: 0;
-    color: var(--color-light-text);
-}
-
-nav ul {
-    display: flex;
-    gap: var(--spacing-medium);
-}
-
-nav a {
-    color: var(--color-secondary);
-    font-family: var(--font-heading);
-    font-weight: var(--font-weight-bold);
-    padding: 5px 10px;
-    border-bottom: 2px solid transparent;
-}
-
-nav a.active,
-nav a:hover {
-    color: var(--color-primary);
-    border-bottom: 2px solid var(--color-primary);
-}
-
-/* --- Conteneurs de page génériques --- */
+/* --- Conteneurs de page --- */
 .page-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -106,23 +61,68 @@ nav a:hover {
 
 .page-title {
     font-size: 3em;
-    font-weight: var(--font-weight-bold);
-    margin-bottom: var(--spacing-large);
-    border-bottom: 3px solid var(--color-primary);
+    text-align: center;
+    margin-bottom: var(--spacing-extra-large);
+    color: var(--color-primary);
+    border-bottom: 5px solid var(--color-primary);
     display: inline-block;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
+    width: 100%;
 }
 
 
+/* --- HEADER --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-medium) var(--spacing-large);
+    background-color: var(--color-card-background);
+    box-shadow: var(--box-shadow-subtle);
+}
+
+.logo h1 {
+    font-size: 1.8em;
+    margin-bottom: 0;
+    color: var(--color-primary);
+}
+
+.logo p {
+    font-size: 0.8em;
+    margin-top: -5px;
+    color: var(--color-light-text);
+}
+
+/* NAVIGATION */
+nav ul {
+    display: flex;
+    gap: var(--spacing-medium);
+}
+
+nav a {
+    color: var(--color-secondary);
+    font-weight: var(--font-weight-bold);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: var(--color-primary);
+    color: var(--color-card-background);
+}
+
+
+/* --- Boutons --- */
 .btn {
     display: inline-block;
-    padding: 12px 25px;
-    font-family: var(--font-heading);
-    font-weight: var(--font-weight-bold);
+    padding: 10px 20px;
     border-radius: 5px;
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
     text-align: center;
-    transition: background-color 0.3s, color 0.3s;
-    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
 .btn-primary {
@@ -131,13 +131,10 @@ nav a:hover {
     border: 2px solid var(--color-primary);
 }
 
-
-
 .btn-primary:hover {
-
-    background-color: var(--color-secondary);
-    color: var(--color-background);
-    border-color: var(--color-secondary);
+    background-color: transparent;
+    color: var(--color-primary);
+    transform: translateY(-2px);
 }
 
 .btn-secondary {
@@ -149,84 +146,43 @@ nav a:hover {
 .btn-secondary:hover {
     background-color: var(--color-primary);
     color: var(--color-card-background);
+    transform: translateY(-2px);
 }
 
-/* --- Footer --- */
+
+/* --- Pied de page (Footer) --- */
 footer {
-    background-color: var(--color-card-background);
-    color: var(--color-secondary);
-    padding: var(--spacing-large);
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
+    padding: var(--spacing-medium) var(--spacing-large);
+    background-color: var(--color-card-background);
+    box-shadow: var(--box-shadow-subtle);
+    margin-top: var(--spacing-large);
     font-size: 0.9em;
+    color: var(--color-light-text);
 }
 
-/* AJOUTER EN HAUT DE style.css (styles généraux) */
-footer {
-    display: flex;
-    justify-content: space-around;
-    /* Ajoutez ou conservez vos autres styles de base du footer ici */
+.footer-contact strong {
+    color: var(--color-primary);
 }
 
-
-.contact a {
-    color: #0a59a7;
-    text-decoration: none;
+.footer-social-links a {
+    color: var(--color-secondary);
+    font-size: 1.2em;
+    margin-left: 10px;
 }
 
-footer p {
-    margin: 5px 0;
+.footer-social-links a:hover {
+    color: var(--color-primary);
 }
 
-.footer-info,
-.footer-contact {
-    flex-basis: 30%;
-    min-width: 250px;
-    margin-bottom: var(--spacing-medium);
-}
-
-.footer-social-links {
-    flex-basis: 20%;
-    min-width: 150px;
-    display: flex;
-}
-
-.footer-social-links p {
-    font-weight: var(--font-weight-bold);
-    margin-bottom: var(--spacing-small);
-}
-
-/* VÉRIFIEZ ou REMPLACEZ ce bloc dans style.css */
-.footer-social-links {
-    flex-basis: 20%;
-    min-width: 150px;
-    display: flex;
-}
-
-/* À ajouter à style.css */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-}
-
-/* AJOUTER à la fin de style.css (Nouveau style hover pour zoomer) */
-
+/* --- Liens Sociaux (Générique) --- */
 .social-links a,
 .footer-social-links a,
 .social-links-contact a {
-    /* Rétablit l'alignement horizontal par défaut */
     display: inline-block;
-    /* Ajout d'une petite marge pour espacer les icônes */
     margin: 0 5px;
-    /* Transition pour l'effet de zoom au survol */
     transition: transform 0.3s ease, color 0.3s ease;
     font-size: 1.4em;
     color: var(--color-secondary);
@@ -237,21 +193,15 @@ footer p {
 .footer-social-links a:hover,
 .social-links-contact a:hover {
     transform: scale(1.2);
-
     color: var(--color-primary);
-
 }
 
 /* Styles pour la navigation entre les pages (parcours, projets) */
 .page-navigation {
-    /* Utiliser max-width pour centrer et padding pour l'espace intérieur */
     max-width: 1200px;
     margin: 30px auto;
     padding: 0 20px;
-
-    /* ESSENTIEL : Flexbox pour aligner les boutons */
     display: flex;
-    /* Aligne le premier élément (Accueil) à gauche et le deuxième (Suivant) à droite */
     justify-content: space-between;
     align-items: center;
 }
@@ -261,37 +211,63 @@ footer p {
     text-align: left;
 }
 
+/* --- 📱 RESPONSIVE GLOBAL (Max 768px) --- */
 @media (max-width: 768px) {
+
+    /* HEADER & NAVIGATION */
     header {
         flex-direction: column;
         align-items: flex-start;
-        padding: var(--spacing-medium);
+        padding: var(--spacing-small);
+    }
+
+    .logo {
+        margin-bottom: var(--spacing-small);
     }
 
     nav ul {
+        /* Les liens passent de ligne à colonne */
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
-        gap: 5px;
-        margin-top: var(--spacing-small);
+        gap: 2px;
+        /* Espacement plus petit sur mobile */
     }
 
-    .page-title {
-        font-size: 2em;
-        margin-bottom: var(--spacing-medium);
-    }
-
+    /* FOOTER */
     footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: var(--spacing-medium);
+        padding: var(--spacing-medium) var(--spacing-small);
     }
 
     .footer-info,
     .footer-contact,
     .footer-social-links {
-        flex-basis: 100%;
-        margin-bottom: var(--spacing-medium);
+        margin-bottom: var(--spacing-small);
+        width: 100%;
+    }
+
+    .footer-social-links a {
+        margin: 0 10px;
+    }
+
+    /* TYPOGRAPHIE */
+    .page-title {
+        font-size: 2.5em;
+        /* Réduire la taille du titre */
+        margin-bottom: var(--spacing-large);
+    }
+
+    /* NAVIGATION ENTRE PAGES */
+    .page-navigation {
+        flex-direction: column;
+        gap: var(--spacing-medium);
+        padding: 0 var(--spacing-small);
+    }
+
+    .page-navigation .btn {
+        width: 100%;
     }
 }

@@ -112,9 +112,7 @@
     transform: translateX(50px);
 }
 
-
 @media (max-width: 768px) {
-
     .contact-grid {
         flex-direction: column;
     }
@@ -123,5 +121,4 @@
     .info-details {
         flex: 1 1 100%;
     }
-
 }

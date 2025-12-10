@@ -115,7 +115,8 @@
 @media (max-width: 768px) {
     .contact-grid {
         flex-direction: column;
-        padding: 0 var(--spacing-medium);
+        align-items: center;
+        padding: 0 var(--spacing-medium--);
     }
 
     .form-wrapper,
@@ -125,5 +126,10 @@
         max-width: 450px;
         margin-right: auto;
         margin-right: auto;
+        margin-bottom: var(--spacing-medium);
+    }
+
+    .footer-social-links {
+        justify-content: center;
     }
 }

@@ -118,11 +118,15 @@
     .contact-grid {
         flex-direction: column;
         gap: var(--spacing-medium);
+        align-items: center;
+        text-align: center;
     }
 
     .form-wrapper,
     .info-details {
         flex: none;
         width: 100%;
+        min-width: 500px;
     }
+
 }

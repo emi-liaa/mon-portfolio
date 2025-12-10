@@ -29,12 +29,6 @@
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
-    margin-bottom: var(--spacing-medium);
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
     width: 100%;
     padding: 15px;
     margin-bottom: var(--spacing-medium);

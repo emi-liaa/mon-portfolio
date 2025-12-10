@@ -114,25 +114,22 @@
 }
 
 @media (max-width: 768px) {
+
     .contact-grid {
+        display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0 var(--spacing-medium--);
-        display: flex;
-        gap: var(--spacing-large--);
         justify-content: center;
-        align-items: center;
+        padding: 0 var(--spacing-medium);
+        gap: var(--spacing-large);
     }
 
     .form-wrapper,
     .info-details {
-        flex: 2;
         width: 100%;
         max-width: 500px;
-        margin-right: auto;
-        margin-left: auto;
-        margin-bottom: var(--spacing-medium);
-        padding: var(--spacing-large--);
+        margin: 0 auto var(--spacing-medium);
+        padding: var(--spacing-large);
         border-radius: 8px;
     }
 

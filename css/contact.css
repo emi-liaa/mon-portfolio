@@ -88,6 +88,14 @@
     outline-offset: 2px;
 }
 
+.fade-right {
+    transform: translateX(-50px);
+}
+
+.fade-left {
+    transform: translateX(50px);
+}
+
 @media (max-width: 768px) {
     .contact-grid {
         flex-direction: column;

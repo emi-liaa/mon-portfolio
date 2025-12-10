@@ -74,7 +74,12 @@
 }
 
 .competences-grid li::marker {
-    color: var(--color-secondary);
+    color: var(--color-secondary--)
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @media (max-width: 768px) {

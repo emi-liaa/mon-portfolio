@@ -117,14 +117,11 @@
 
     .contact-grid {
         flex-direction: column;
-        gap: var(--spacing-medium);
-        align-items: center;
     }
 
     .form-wrapper,
     .info-details {
-        width: 100%;
-        min-width: 500px;
+        flex: 1 1 100%;
     }
 
 }

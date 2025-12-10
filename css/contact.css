@@ -88,6 +88,11 @@
     outline-offset: 2px;
 }
 
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .fade-right {
     transform: translateX(-50px);
 }

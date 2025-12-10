@@ -52,15 +52,6 @@
     margin-top: 10px;
 }
 
-.social-links,
-.footer-social-links {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}
-
 .hello-content {
     flex: 1;
     padding-top: var(--spacing-large);

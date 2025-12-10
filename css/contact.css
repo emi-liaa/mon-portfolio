@@ -15,6 +15,23 @@
     box-shadow: var(--box-shadow-subtle);
 }
 
+.contact-form label {
+    display: block;
+    margin-bottom: var(--spacing-small);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-secondary);
+}
+
+.contact-form .required {
+    color: var(--color-primary);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    margin-bottom: var(--spacing-medium);
+}
+
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
@@ -109,5 +126,19 @@
     .form-wrapper,
     .info-details {
         flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .contact-grid {
+        flex-direction: column;
+        gap: var(--spacing-medium);
+    }
+
+    .form-wrapper,
+    .info-details {
+        flex: none;
+        width: 100%;
     }
 }

@@ -104,3 +104,27 @@
         gap: var(--spacing-medium);
     }
 }
+
+@media (max-width: 768px) {
+    .card-item {
+        flex-direction: column;
+    }
+
+    .date-side {
+        flex: none;
+        padding-right: 0;
+        margin-bottom: var(--spacing-small);
+    }
+
+    .description-side {
+        border-left: none;
+        padding-left: 0;
+        border-top: 3px solid var(--color-accent-bg);
+        padding-top: var(--spacing-small);
+    }
+
+    .competences-grid {
+        flex-direction: column;
+        gap: var(--spacing-medium);
+    }
+}

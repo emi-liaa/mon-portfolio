@@ -82,16 +82,15 @@
     margin-bottom: var(--spacing-small);
 }
 
-.social-links-contact {
+/* Règle pour le conteneur de liens sociaux dans info-details */
+.info-details .footer-social-links {
     display: flex;
     gap: 15px;
     margin-top: var(--spacing-medium);
-
+    /* Ajouté pour centrer les liens sur mobile si la section prend toute la largeur */
+    justify-content: flex-start;
 }
 
-.social-links-contact a:hover img {
-    opacity: 1;
-}
 
 .contact-form input:focus,
 .contact-form textarea:focus,
@@ -106,6 +105,7 @@
 }
 
 .fade-right {
+    /* Le décalage initial sur desktop est trop grand pour un effet fluide sur mobile */
     transform: translateX(-50px);
 }
 
@@ -126,9 +126,24 @@
     .contact-grid .info-details {
         flex: none;
         width: 100%;
-        max-width: 400px;
+        /* Suppression du max-width pour mieux utiliser l'espace horizontal sur les petits écrans */
+        /* max-width: 400px; */
         margin-left: auto;
         margin-right: auto;
         margin-bottom: var(--spacing-medium);
+    }
+
+    /* Centrage des liens sociaux dans la carte d'info sur mobile */
+    .info-details .footer-social-links {
+        justify-content: center;
+    }
+
+    /* Réduction du décalage pour l'animation sur mobile */
+    .fade-right {
+        transform: translateX(-10px);
+    }
+
+    .fade-left {
+        transform: translateX(10px);
     }
 }

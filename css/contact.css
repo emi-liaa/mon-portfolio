@@ -115,25 +115,35 @@
 
 @media (max-width: 768px) {
 
-    .contact-grid {
+    .page-container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .contact-page {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        padding: 0 var(--spacing-medium);
-        gap: var(--spacing-large);
     }
 
-    .form-wrapper,
-    .info-details {
+    .contact-grid {
         width: 100%;
-        max-width: 500px;
-        margin: 0 auto var(--spacing-medium);
-        padding: var(--spacing-large);
-        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .footer-social-links {
-        justify-content: center;
+    .form-wrapper {
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .info-details {
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto;
     }
 }

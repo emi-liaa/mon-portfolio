@@ -113,16 +113,22 @@
     transform: translateX(50px);
 }
 
-
 @media (max-width: 768px) {
-    .page-container {
-        padding: 0 10px;
+
+    .contact-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 var(--spacing-medium);
     }
 
-    .form-wrapper,
-    .info-details {
+    .contact-grid .form-wrapper,
+    .contact-grid .info-details {
+        flex: none;
         width: 100%;
-        max-width: 100%;
-        margin: 0 auto;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: var(--spacing-medium);
     }
 }

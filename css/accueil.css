@@ -87,6 +87,11 @@
     gap: var(--spacing-medium);
 }
 
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @media (max-width: 768px) {
     .accueil-container {
         flex-direction: column;

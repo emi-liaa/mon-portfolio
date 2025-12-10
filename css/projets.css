@@ -75,6 +75,11 @@
     border-bottom-color: #3870b3;
 }
 
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @media (min-width: 768px) {
 
     .projet-content-grid {
@@ -90,5 +95,14 @@
 @media (max-width: 768px) {
     .projets-grid {
         grid-template-columns: 1fr;
+    }
+
+    .projet-card.animate-on-scroll {
+        transform: translateY(10px);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .projet-card.animate-on-scroll.is-visible {
+        transform: translateY(0);
     }
 }

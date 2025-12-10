@@ -126,19 +126,16 @@
     .contact-grid .info-details {
         flex: none;
         width: 100%;
-        /* Suppression du max-width pour mieux utiliser l'espace horizontal sur les petits écrans */
-        /* max-width: 400px; */
+
         margin-left: auto;
         margin-right: auto;
         margin-bottom: var(--spacing-medium);
     }
 
-    /* Centrage des liens sociaux dans la carte d'info sur mobile */
     .info-details .footer-social-links {
         justify-content: center;
     }
 
-    /* Réduction du décalage pour l'animation sur mobile */
     .fade-right {
         transform: translateX(-10px);
     }
